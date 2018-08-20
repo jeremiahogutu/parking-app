@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Parkings</h1>
+<p>Parking spots available <%= @spots_available %></p>
+<table>
+  <thead>
+    <tr>
+      <th>Parking ID</th>
+      <th>License Plate</th>
+      <th>Price($)</th>
+      <th>Ticket Validity</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parkings.each do |parking| %>
+    <td><%= parking.id %></td>
+    <td><%= parking.license %></td>
+    <td><%= parking.price %></td>
+    <td><%= parking.validity %></td>
+      <tr>
+        <td><%= link_to 'Show', parking %></td>
+        <td><%= link_to 'Edit', edit_parking_path(parking) %></td>
+        <td><%= link_to 'Destroy', parking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Parking', new_parking_path %>
