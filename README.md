@@ -1,2 +1,2 @@
-# parking-garage-app
-An application to manage customers using their parking garage.
+# parking-app
+An application to manage customers in a parking garage.
