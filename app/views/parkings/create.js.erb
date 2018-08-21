@@ -1,0 +1,4 @@
+$('#new-parking form').remove();
+$('#new-parking a').show();
+$('#parking-spots').html("<%= j render 'spots_available' %>")
+$('table#parkings tbody').append("<%= j render @parking %>")

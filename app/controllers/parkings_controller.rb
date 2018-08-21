@@ -27,9 +27,12 @@ class ParkingsController < ApplicationController
   # POST /parkings.json
   def create
     @parking = Parking.new(parking_params)
-
     respond_to do |format|
       if @parking.save
+        @total_cars = Parking.all.count
+        number_of_spots = 40
+        @spots_available = number_of_spots - @total_cars
+        format.js
         format.html { redirect_to @parking, notice: 'Parking was successfully created.' }
         format.json { render :show, status: :created, location: @parking }
       else
@@ -57,7 +60,11 @@ class ParkingsController < ApplicationController
   # DELETE /parkings/1.json
   def destroy
     @parking.destroy
+    @total_cars = Parking.all.count
+    number_of_spots = 40
+    @spots_available = number_of_spots - @total_cars
     respond_to do |format|
+      format.js
       format.html { redirect_to parkings_url, notice: 'Parking was successfully destroyed.' }
       format.json { head :no_content }
     end
