@@ -1,4 +1,4 @@
 $('.delete').bind('ajax:success', function() {
     $(this).closest('tr').fadeOut();
-    $('#parking-spots').html("<%= j render 'spots_available' %>")
+    $('#parking-ticket-info').html("<%= j render 'parking_ticket_info' %>")
 })
