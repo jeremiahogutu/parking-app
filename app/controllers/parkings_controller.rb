@@ -50,7 +50,11 @@ class ParkingsController < ApplicationController
     @spots_available = number_of_spots - @occupied_spots
     @current_parking_info = Parking.find(params[:id])
     @time_difference = TimeDifference.between(Time.now, @current_parking_info.created_at).in_hours.floor
-    @amount_due = final_payment(@time_difference)
+    @amount_due = if @current_parking_info.is_void
+                    'Paid'
+                  else
+                    final_payment(@time_difference)
+                  end
     respond_to do |format|
       format.js
     end
@@ -97,6 +101,21 @@ class ParkingsController < ApplicationController
         format.html { render :edit }
         format.json { render json: @parking.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def pay_ticket
+    # binding.pry
+    @occupied_spots = Parking.all.count
+    number_of_spots = 7
+    @spots_available = number_of_spots - @occupied_spots
+    @current_parking_info = Parking.find(params[:id])
+    @current_parking_info.is_void = true
+    @current_parking_info.save
+    respond_to do |format|
+      format.js
+      format.html { redirect_to @parking, notice: 'Parking was successfully created.' }
+      format.json { render :show, status: :created, location: @parking }
     end
   end
 

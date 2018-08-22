@@ -1,7 +1,10 @@
 <tr>
   <td><%= parking.id %></td>
   <td><%= parking.license %></td>
-  <td><%= link_to 'Ticket Info', parking, data: { remote: true }, class: ' table-button show-button' %></td>
-  <td><%= link_to 'Pay Ticket', edit_parking_path(parking), class: 'table-button pay-button' %></td>
-  <td><%= link_to 'Delete Ticket', parking, method: :delete, data: { remote: true }, class: 'table-button delete-button delete' %></td>
+  <td><%= link_to 'Ticket Info', parking, data: {remote: true}, class: ' table-button show-button' %></td>
+  <% if parking.is_void %>
+    <td><%= link_to 'Exit Parking Lot', parking, method: :delete, data: {remote: true}, class: 'table-button delete-button delete' %></td>
+  <% else %>
+    <td><%= link_to 'Pay Ticket', pay_ticket_path(parking), data: {:confirm => '', remote: true}, class: 'table-button pay-button' %></td>
+  <% end %>
 </tr>

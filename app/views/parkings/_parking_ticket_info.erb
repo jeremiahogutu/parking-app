@@ -2,7 +2,8 @@
   <div class="current-time-container ">
     <div class="current-time flex-align-center w-100 ">
       <div class="img-container"><%= image_tag("clock.svg") %></div>
-      <h2 class="secondary-text font-15 flex-column current-time-text">Current time <span id="time" class="data-fix font-15"></span></h2>
+      <h2 class="secondary-text font-15 flex-column current-time-text">Current time
+        <span id="time" class="data-fix font-15"></span></h2>
     </div>
     <div class="purchase-time flex-align-center w-100 ">
       <div class="img-container"><%= image_tag("ticket.svg") %></div>
@@ -15,8 +16,15 @@
   <div class="desktop-container">
     <div class="duration-container flex-align-center w-100">
       <div class="img-container"><%= image_tag("clock.svg") %></div>
-      <div class="duration-data"><h2 class="secondary-text font-15 flex-column">Duration Of Parking:
-        <span id="demo" class="data-fix font-15"></span></h2></div>
+      <div class="duration-data">
+        <h2 class="secondary-text font-15 flex-column">Duration Of Parking:
+          <% if @current_parking_info.is_void %>
+            <span class="data-fix font-15">Proceed to exit</span>
+          <% else %>
+            <span id="demo" class="data-fix font-15"></span>
+          <% end %>
+        </h2>
+      </div>
     </div>
     <div class="parking-spots-container flex-align-center w-100">
       <div class="img-container"><%= image_tag("parking.svg") %></div>
@@ -32,7 +40,13 @@
     </div>
     <div class="amount-due-container flex-align-center w-100">
       <div class="img-container"><%= image_tag("banknote.svg") %></div>
-      <h2 class="secondary-text font-15 flex-column amount-due-text">Amount Due: <span class="data-fix font-15"><%= @amount_due %>$</span>
+      <h2 class="secondary-text font-15 flex-column amount-due-text">Amount Due:
+        <% if @amount_due == 'Paid' %>
+          <span class="data-fix font-15"><%= @amount_due %></span>
+        <% else %>
+          <span class="data-fix font-15">$<%= @amount_due %></span>
+        <% end %>
+
       </h2>
     </div>
   </div>
