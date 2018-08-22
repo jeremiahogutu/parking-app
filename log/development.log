@@ -3039,3 +3039,2086 @@ Processing by ParkingsController#index as HTML
 Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/parkings/new" for 127.0.0.1 at 2018-08-22 05:57:58 -0400
+Processing by ParkingsController#new as JS
+  Rendering parkings/new.js.erb
+  Rendered parkings/_form.html.erb (2.0ms)
+  Rendered parkings/new.js.erb (11.0ms)
+Completed 200 OK in 32ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parkings" for 127.0.0.1 at 2018-08-22 05:58:18 -0400
+Processing by ParkingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5tH5U6SYVCLcuWtF7zAzfp1LeRPX+2YRVvjHYgEeFzcXvcSYT+30kmTWYCvYxoPK3xmHdHdvh64Cp16alLkgUw==", "parking"=>{"license"=>"HSF 6785"}, "commit"=>"Create Parking"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `parkings` (`created_at`, `updated_at`, `license`) VALUES ('2018-08-22 09:58:18', '2018-08-22 09:58:18', 'HSF 6785')[0m
+  [1m[35m (68.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/create.js.erb
+  Rendered parkings/_parking_ticket_info.erb (7.2ms)
+  Rendered parkings/_parking.html.erb (0.9ms)
+  Rendered parkings/create.js.erb (12.8ms)
+Completed 200 OK in 97ms (Views: 21.3ms | ActiveRecord: 69.8ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 05:58:23 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (7.5ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [7 times] (2.9ms)
+  Rendered parkings/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 46ms (Views: 41.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:00:40 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (346.0ms)
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [7 times] (3.1ms)
+  Rendered parkings/index.html.erb within layouts/application (356.9ms)
+Completed 200 OK in 419ms (Views: 394.8ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/parkings/13" for 127.0.0.1 at 2018-08-22 06:00:45 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"13"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 13 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM `parkings` WHERE `parkings`.`id` = 13[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/destroy.js.erb
+  Rendered parkings/_parking_ticket_info.erb (4.9ms)
+  Rendered parkings/destroy.js.erb (7.8ms)
+Completed 200 OK in 26ms (Views: 10.6ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:01:33 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (9.9ms)
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.4ms)
+  Rendered parkings/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 52ms (Views: 48.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/parkings/6" for 127.0.0.1 at 2018-08-22 06:01:37 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"6"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 6 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 6 LIMIT 1[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (10.4ms)
+  Rendered parkings/show.js.erb (15.9ms)
+Completed 200 OK in 24ms (Views: 19.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings/1" for 127.0.0.1 at 2018-08-22 06:01:50 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (9.4ms)
+  Rendered parkings/show.js.erb (11.6ms)
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/parkings/2" for 127.0.0.1 at 2018-08-22 06:01:54 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (7.2ms)
+  Rendered parkings/show.js.erb (9.5ms)
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/parkings/3" for 127.0.0.1 at 2018-08-22 06:01:56 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (6.5ms)
+  Rendered parkings/show.js.erb (9.9ms)
+Completed 200 OK in 18ms (Views: 13.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/parkings/4" for 127.0.0.1 at 2018-08-22 06:01:58 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"4"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (20.4ms)
+  Rendered parkings/show.js.erb (24.4ms)
+Completed 200 OK in 34ms (Views: 30.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/parkings/new" for 127.0.0.1 at 2018-08-22 06:02:12 -0400
+Processing by ParkingsController#new as JS
+  Rendering parkings/new.js.erb
+  Rendered parkings/_form.html.erb (14.2ms)
+  Rendered parkings/new.js.erb (23.1ms)
+Completed 200 OK in 44ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parkings" for 127.0.0.1 at 2018-08-22 06:02:23 -0400
+Processing by ParkingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"huBcp4dP1BexuTwbCSmJwHOmkIuxSxWDIH8YwTBOlBN3jGFsbDp0pwnWN3U+3zl0MfRu7BHf9Dx0IIE5pemjdw==", "parking"=>{"license"=>"ADF 7896"}, "commit"=>"Create Parking"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `parkings` (`created_at`, `updated_at`, `license`) VALUES ('2018-08-22 10:02:23', '2018-08-22 10:02:23', 'ADF 7896')[0m
+  [1m[35m (26.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/create.js.erb
+  Rendered parkings/_parking_ticket_info.erb (5.7ms)
+  Rendered parkings/_parking.html.erb (0.9ms)
+  Rendered parkings/create.js.erb (10.5ms)
+Completed 200 OK in 47ms (Views: 14.0ms | ActiveRecord: 27.4ms)
+
+
+Started DELETE "/parkings/6" for 127.0.0.1 at 2018-08-22 06:04:14 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"6"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 6 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM `parkings` WHERE `parkings`.`id` = 6[0m
+  [1m[35m (24.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/destroy.js.erb
+  Rendered parkings/_parking_ticket_info.erb (8.4ms)
+  Rendered parkings/destroy.js.erb (11.0ms)
+Completed 200 OK in 47ms (Views: 14.8ms | ActiveRecord: 26.2ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:04:48 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (8.9ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.8ms)
+  Rendered parkings/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 53ms (Views: 48.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/parkings/new" for 127.0.0.1 at 2018-08-22 06:04:57 -0400
+Processing by ParkingsController#new as JS
+  Rendering parkings/new.js.erb
+  Rendered parkings/_form.html.erb (1.6ms)
+  Rendered parkings/new.js.erb (10.5ms)
+Completed 200 OK in 34ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parkings" for 127.0.0.1 at 2018-08-22 06:05:06 -0400
+Processing by ParkingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2DwZ8g+VH86l+PJQtxCSY7CtQGmxFD6am2dqq5Ib6wApUCQ55OC/fh2X+T6A5iLX8v++DhGA3yXPOPNTB7zcZA==", "parking"=>{"license"=>"asd 5672"}, "commit"=>"Create Parking"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `parkings` (`created_at`, `updated_at`, `license`) VALUES ('2018-08-22 10:05:06', '2018-08-22 10:05:06', 'asd 5672')[0m
+  [1m[35m (27.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/create.js.erb
+  Rendered parkings/_parking_ticket_info.erb (8.3ms)
+  Rendered parkings/_parking.html.erb (0.9ms)
+  Rendered parkings/create.js.erb (14.4ms)
+Completed 200 OK in 51ms (Views: 17.6ms | ActiveRecord: 28.3ms)
+
+
+Started DELETE "/parkings/15" for 127.0.0.1 at 2018-08-22 06:05:09 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"15"}
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 15 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM `parkings` WHERE `parkings`.`id` = 15[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/destroy.js.erb
+  Rendered parkings/_parking_ticket_info.erb (5.3ms)
+  Rendered parkings/destroy.js.erb (10.1ms)
+Completed 200 OK in 28ms (Views: 13.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/parkings/new" for 127.0.0.1 at 2018-08-22 06:05:12 -0400
+Processing by ParkingsController#new as JS
+  Rendering parkings/new.js.erb
+  Rendered parkings/_form.html.erb (1.7ms)
+  Rendered parkings/new.js.erb (10.3ms)
+Completed 200 OK in 32ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parkings" for 127.0.0.1 at 2018-08-22 06:05:25 -0400
+Processing by ParkingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9cR5jIpz+tUO1qwleK6lwA+Jnhnp7ZCFMBczZhozChQEqERHYQZaZba5p0tPWBV0Tdtgfkl5cTpkSKqej5Q9cA==", "parking"=>{"license"=>"asd 5678"}, "commit"=>"Create Parking"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `parkings` (`created_at`, `updated_at`, `license`) VALUES ('2018-08-22 10:05:25', '2018-08-22 10:05:25', 'asd 5678')[0m
+  [1m[35m (25.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/create.js.erb
+  Rendered parkings/_parking_ticket_info.erb (5.7ms)
+  Rendered parkings/_parking.html.erb (1.0ms)
+  Rendered parkings/create.js.erb (23.2ms)
+Completed 200 OK in 58ms (Views: 26.2ms | ActiveRecord: 26.8ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:06:23 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (9.4ms)
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [7 times] (2.4ms)
+  Rendered parkings/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 52ms (Views: 47.4ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/parkings/16" for 127.0.0.1 at 2018-08-22 06:06:29 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"16"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 16 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM `parkings` WHERE `parkings`.`id` = 16[0m
+  [1m[35m (19.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/destroy.js.erb
+  Rendered parkings/_parking_ticket_info.erb (6.3ms)
+  Rendered parkings/destroy.js.erb (9.3ms)
+Completed 200 OK in 42ms (Views: 12.9ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:06:36 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (1.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (4.0ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.4ms)
+  Rendered parkings/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 41ms (Views: 35.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:07:13 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (4.1ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.1ms)
+  Rendered parkings/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parkings/new" for 127.0.0.1 at 2018-08-22 06:07:17 -0400
+Processing by ParkingsController#new as JS
+  Rendering parkings/new.js.erb
+  Rendered parkings/_form.html.erb (2.3ms)
+  Rendered parkings/new.js.erb (10.4ms)
+Completed 200 OK in 31ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parkings" for 127.0.0.1 at 2018-08-22 06:07:23 -0400
+Processing by ParkingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/preOfSgV2agyd/zdDZsg+yQyHDx78rzzIKm0FckkjMP9uPyH9X31him1J1DwNw3rsI2F1F7K0yY3T8owoOlVw==", "parking"=>{"license"=>"wer 8972"}, "commit"=>"Create Parking"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `parkings` (`created_at`, `updated_at`, `license`) VALUES ('2018-08-22 10:07:23', '2018-08-22 10:07:23', 'wer 8972')[0m
+  [1m[35m (22.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/create.js.erb
+  Rendered parkings/_parking_ticket_info.erb (3.8ms)
+  Rendered parkings/_parking.html.erb (0.9ms)
+  Rendered parkings/create.js.erb (8.3ms)
+Completed 200 OK in 40ms (Views: 11.3ms | ActiveRecord: 23.5ms)
+
+
+Started DELETE "/parkings/17" for 127.0.0.1 at 2018-08-22 06:07:26 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"17"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 17 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM `parkings` WHERE `parkings`.`id` = 17[0m
+  [1m[35m (16.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/destroy.js.erb
+  Rendered parkings/_parking_ticket_info.erb (11.3ms)
+  Rendered parkings/destroy.js.erb (14.4ms)
+Completed 200 OK in 42ms (Views: 17.8ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:09:34 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (6.1ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.2ms)
+  Rendered parkings/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 50ms (Views: 45.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings/new" for 127.0.0.1 at 2018-08-22 06:09:36 -0400
+Processing by ParkingsController#new as JS
+  Rendering parkings/new.js.erb
+  Rendered parkings/_form.html.erb (2.1ms)
+  Rendered parkings/new.js.erb (11.0ms)
+Completed 200 OK in 32ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parkings" for 127.0.0.1 at 2018-08-22 06:09:47 -0400
+Processing by ParkingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LdGOxDm4h2V6I6yhAyyJdY2fQJvhMh7cYFMBZRkPurXcvbMP0s0n1cJMp8802jnBz82+/EGm/2M0DJidjKiN0Q==", "parking"=>{"license"=>"SFD 2415"}, "commit"=>"Create Parking"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `parkings` (`created_at`, `updated_at`, `license`) VALUES ('2018-08-22 10:09:47', '2018-08-22 10:09:47', 'SFD 2415')[0m
+  [1m[35m (36.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/create.js.erb
+  Rendered parkings/_parking_ticket_info.erb (4.1ms)
+  Rendered parkings/_parking.html.erb (0.9ms)
+  Rendered parkings/create.js.erb (8.3ms)
+Completed 200 OK in 55ms (Views: 11.0ms | ActiveRecord: 37.4ms)
+
+
+Started DELETE "/parkings/18" for 127.0.0.1 at 2018-08-22 06:09:50 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"18"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 18 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM `parkings` WHERE `parkings`.`id` = 18[0m
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/destroy.js.erb
+  Rendered parkings/_parking_ticket_info.erb (8.6ms)
+  Rendered parkings/destroy.js.erb (11.5ms)
+Completed 200 OK in 41ms (Views: 15.1ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/parkings/new" for 127.0.0.1 at 2018-08-22 06:09:53 -0400
+Processing by ParkingsController#new as JS
+  Rendering parkings/new.js.erb
+  Rendered parkings/_form.html.erb (1.8ms)
+  Rendered parkings/new.js.erb (10.1ms)
+Completed 200 OK in 30ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parkings" for 127.0.0.1 at 2018-08-22 06:10:14 -0400
+Processing by ParkingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+eIV9AVZ4+yWi+F/1OM0WSSGwWs2RI3nWal4diF2xp0Ijig/7ixDXC7k6hHjFYTtZtQ/DJbQbFgN9uGOtNHx+Q==", "parking"=>{"license"=>"ASD 7892"}, "commit"=>"Create Parking"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `parkings` (`created_at`, `updated_at`, `license`) VALUES ('2018-08-22 10:10:14', '2018-08-22 10:10:14', 'ASD 7892')[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/create.js.erb
+  Rendered parkings/_parking_ticket_info.erb (3.9ms)
+  Rendered parkings/_parking.html.erb (1.0ms)
+  Rendered parkings/create.js.erb (8.5ms)
+Completed 200 OK in 23ms (Views: 12.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:14:04 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (1.9ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (5.7ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [7 times] (4.9ms)
+  Rendered parkings/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 57ms (Views: 50.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:14:37 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (5.6ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [7 times] (2.8ms)
+  Rendered parkings/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 53ms (Views: 46.1ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/parkings/19" for 127.0.0.1 at 2018-08-22 06:14:58 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"19"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 19 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM `parkings` WHERE `parkings`.`id` = 19[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/destroy.js.erb
+  Rendered parkings/_parking_ticket_info.erb (3.7ms)
+  Rendered parkings/destroy.js.erb (6.0ms)
+Completed 200 OK in 22ms (Views: 8.8ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:15:30 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.7ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (6.6ms)
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.6ms)
+  Rendered parkings/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 53ms (Views: 48.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/parkings/new" for 127.0.0.1 at 2018-08-22 06:15:35 -0400
+Processing by ParkingsController#new as JS
+  Rendering parkings/new.js.erb
+  Rendered parkings/_form.html.erb (1.7ms)
+  Rendered parkings/new.js.erb (9.6ms)
+Completed 200 OK in 29ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parkings" for 127.0.0.1 at 2018-08-22 06:15:48 -0400
+Processing by ParkingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fNbXY3jsnfkeAsFC1WKlu4bUUt2xJPoFOBuYF0nX1oCNuuqok5k9SaZtyizilBUPxIasuhGwG7psRAHv3HDh5A==", "parking"=>{"license"=>"DER 5672"}, "commit"=>"Create Parking"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `parkings` (`created_at`, `updated_at`, `license`) VALUES ('2018-08-22 10:15:48', '2018-08-22 10:15:48', 'DER 5672')[0m
+  [1m[35m (68.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/create.js.erb
+  Rendered parkings/_parking_ticket_info.erb (4.2ms)
+  Rendered parkings/_parking.html.erb (0.8ms)
+  Rendered parkings/create.js.erb (9.0ms)
+Completed 200 OK in 88ms (Views: 12.8ms | ActiveRecord: 69.1ms)
+
+
+Started DELETE "/parkings/20" for 127.0.0.1 at 2018-08-22 06:15:50 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"20"}
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 20 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM `parkings` WHERE `parkings`.`id` = 20[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/destroy.js.erb
+  Rendered parkings/_parking_ticket_info.erb (7.2ms)
+  Rendered parkings/destroy.js.erb (9.9ms)
+Completed 200 OK in 28ms (Views: 15.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/parkings/new" for 127.0.0.1 at 2018-08-22 06:15:53 -0400
+Processing by ParkingsController#new as JS
+  Rendering parkings/new.js.erb
+  Rendered parkings/_form.html.erb (1.7ms)
+  Rendered parkings/new.js.erb (10.6ms)
+Completed 200 OK in 37ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parkings" for 127.0.0.1 at 2018-08-22 06:16:08 -0400
+Processing by ParkingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OquXjjeFCwxlBK+oAZCEXr6/QSImVb5D58FRK5T3p9zLx6pF3PCrvN1rpMY2ZjTq/O2/RYbBX/yznsjTAVCQuA==", "parking"=>{"license"=>"DFY 3456"}, "commit"=>"Create Parking"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `parkings` (`created_at`, `updated_at`, `license`) VALUES ('2018-08-22 10:16:08', '2018-08-22 10:16:08', 'DFY 3456')[0m
+  [1m[35m (23.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/create.js.erb
+  Rendered parkings/_parking_ticket_info.erb (4.1ms)
+  Rendered parkings/_parking.html.erb (1.2ms)
+  Rendered parkings/create.js.erb (9.5ms)
+Completed 200 OK in 46ms (Views: 12.4ms | ActiveRecord: 25.2ms)
+
+
+Started GET "/parkings/1" for 127.0.0.1 at 2018-08-22 06:16:18 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (4.2ms)
+  Rendered parkings/show.js.erb (6.4ms)
+Completed 200 OK in 15ms (Views: 9.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings/2" for 127.0.0.1 at 2018-08-22 06:16:20 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (6.7ms)
+  Rendered parkings/show.js.erb (9.0ms)
+Completed 200 OK in 18ms (Views: 12.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/parkings/3" for 127.0.0.1 at 2018-08-22 06:16:21 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (11.4ms)
+  Rendered parkings/show.js.erb (14.6ms)
+Completed 200 OK in 28ms (Views: 21.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parkings/5" for 127.0.0.1 at 2018-08-22 06:16:25 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (5.1ms)
+  Rendered parkings/show.js.erb (7.7ms)
+Completed 200 OK in 18ms (Views: 12.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parkings/14" for 127.0.0.1 at 2018-08-22 06:16:27 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"14"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 14 LIMIT 1[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 14 LIMIT 1[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (5.5ms)
+  Rendered parkings/show.js.erb (7.9ms)
+Completed 200 OK in 19ms (Views: 11.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/parkings/21" for 127.0.0.1 at 2018-08-22 06:16:29 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"21"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 21 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 21 LIMIT 1[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (7.2ms)
+  Rendered parkings/show.js.erb (9.6ms)
+Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parkings/21" for 127.0.0.1 at 2018-08-22 06:16:29 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"21"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 21 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 21 LIMIT 1[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (7.1ms)
+  Rendered parkings/show.js.erb (12.8ms)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings/1" for 127.0.0.1 at 2018-08-22 06:16:33 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (10.1ms)
+  Rendered parkings/show.js.erb (12.2ms)
+Completed 200 OK in 22ms (Views: 16.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parkings/2" for 127.0.0.1 at 2018-08-22 06:16:35 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (7.0ms)
+  Rendered parkings/show.js.erb (9.6ms)
+Completed 200 OK in 21ms (Views: 13.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/parkings/3" for 127.0.0.1 at 2018-08-22 06:16:37 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (3.9ms)
+  Rendered parkings/show.js.erb (6.2ms)
+Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings/4" for 127.0.0.1 at 2018-08-22 06:16:38 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"4"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (6.2ms)
+  Rendered parkings/show.js.erb (8.6ms)
+Completed 200 OK in 16ms (Views: 12.0ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/parkings/21" for 127.0.0.1 at 2018-08-22 06:18:17 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"21"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 21 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM `parkings` WHERE `parkings`.`id` = 21[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/destroy.js.erb
+  Rendered parkings/_parking_ticket_info.erb (3.9ms)
+  Rendered parkings/destroy.js.erb (6.2ms)
+Completed 200 OK in 24ms (Views: 8.8ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:24:09 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (4.3ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.5ms)
+  Rendered parkings/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 62ms (Views: 58.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:25:30 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (5.0ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.8ms)
+  Rendered parkings/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 42ms (Views: 38.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:27:21 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (9.3ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.4ms)
+  Rendered parkings/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 53ms (Views: 47.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:28:30 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (1.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (4.6ms)
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.3ms)
+  Rendered parkings/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 56ms (Views: 49.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:29:40 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (5.3ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.3ms)
+  Rendered parkings/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 53ms (Views: 49.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:30:37 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (3.9ms)
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (3.2ms)
+  Rendered parkings/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 48ms (Views: 43.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:34:38 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (9.2ms)
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.5ms)
+  Rendered parkings/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 91ms (Views: 86.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:36:51 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (6.0ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.4ms)
+  Rendered parkings/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:37:09 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (6.3ms)
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.6ms)
+  Rendered parkings/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 54ms (Views: 49.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/parkings/1" for 127.0.0.1 at 2018-08-22 06:37:26 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (3.9ms)
+  Rendered parkings/show.js.erb (6.0ms)
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings/2" for 127.0.0.1 at 2018-08-22 06:37:28 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (4.5ms)
+  Rendered parkings/show.js.erb (7.1ms)
+Completed 200 OK in 17ms (Views: 11.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parkings/3" for 127.0.0.1 at 2018-08-22 06:37:31 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (5.4ms)
+  Rendered parkings/show.js.erb (8.4ms)
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings/4" for 127.0.0.1 at 2018-08-22 06:37:33 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"4"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (8.3ms)
+  Rendered parkings/show.js.erb (10.8ms)
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/parkings/5" for 127.0.0.1 at 2018-08-22 06:37:35 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (5.9ms)
+  Rendered parkings/show.js.erb (8.0ms)
+Completed 200 OK in 21ms (Views: 11.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings/14" for 127.0.0.1 at 2018-08-22 06:37:36 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"14"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 14 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 14 LIMIT 1[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (4.0ms)
+  Rendered parkings/show.js.erb (6.4ms)
+Completed 200 OK in 19ms (Views: 13.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings/1" for 127.0.0.1 at 2018-08-22 06:37:38 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (4.1ms)
+  Rendered parkings/show.js.erb (6.7ms)
+Completed 200 OK in 16ms (Views: 10.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parkings/2" for 127.0.0.1 at 2018-08-22 06:37:41 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (6.8ms)
+  Rendered parkings/show.js.erb (9.7ms)
+Completed 200 OK in 19ms (Views: 13.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parkings/3" for 127.0.0.1 at 2018-08-22 06:37:43 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (3.8ms)
+  Rendered parkings/show.js.erb (6.2ms)
+Completed 200 OK in 15ms (Views: 9.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings/4" for 127.0.0.1 at 2018-08-22 06:37:44 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"4"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (6.7ms)
+  Rendered parkings/show.js.erb (11.2ms)
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings/5" for 127.0.0.1 at 2018-08-22 06:37:46 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (3.9ms)
+  Rendered parkings/show.js.erb (9.5ms)
+Completed 200 OK in 20ms (Views: 13.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings/14" for 127.0.0.1 at 2018-08-22 06:37:47 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"14"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 14 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 14 LIMIT 1[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (4.0ms)
+  Rendered parkings/show.js.erb (7.6ms)
+Completed 200 OK in 18ms (Views: 12.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:40:07 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (6.5ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.0ms)
+  Rendered parkings/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 56ms (Views: 48.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:41:29 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (3.8ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.5ms)
+  Rendered parkings/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 51ms (Views: 46.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:42:00 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (6.5ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.6ms)
+  Rendered parkings/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 59ms (Views: 54.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:43:42 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (4.3ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.2ms)
+  Rendered parkings/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:44:27 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (5.9ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.8ms)
+  Rendered parkings/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 71ms (Views: 65.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:47:55 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (8.9ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.5ms)
+  Rendered parkings/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 65ms (Views: 59.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:49:35 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (5.8ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.2ms)
+  Rendered parkings/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 58ms (Views: 54.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:50:21 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (6.7ms)
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.5ms)
+  Rendered parkings/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 69ms (Views: 65.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:50:52 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (7.2ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (5.3ms)
+  Rendered parkings/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 94ms (Views: 87.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:51:24 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (9.7ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.5ms)
+  Rendered parkings/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 66ms (Views: 58.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:54:07 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (4.4ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.2ms)
+  Rendered parkings/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 58ms (Views: 53.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:56:50 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (4.8ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.4ms)
+  Rendered parkings/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:57:36 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (5.1ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.5ms)
+  Rendered parkings/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 53ms (Views: 49.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 06:59:16 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (6.1ms)
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.2ms)
+  Rendered parkings/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 46ms (Views: 41.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:03:42 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (122.8ms)
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (3.3ms)
+  Rendered parkings/index.html.erb within layouts/application (129.9ms)
+Completed 200 OK in 205ms (Views: 199.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:05:02 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (1.1ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (7.7ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (9.1ms)
+  Rendered parkings/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 59ms (Views: 52.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:05:48 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (12.0ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (4.4ms)
+  Rendered parkings/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 68ms (Views: 63.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:07:09 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (8.2ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (7.6ms)
+  Rendered parkings/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 59ms (Views: 53.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:08:12 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (12.7ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (4.5ms)
+  Rendered parkings/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 80ms (Views: 75.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:09:26 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (14.0ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (3.4ms)
+  Rendered parkings/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 66ms (Views: 60.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:10:24 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (11.1ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (3.8ms)
+  Rendered parkings/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 86ms (Views: 80.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:11:45 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (7.5ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.6ms)
+  Rendered parkings/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:12:34 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (5.8ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (3.5ms)
+  Rendered parkings/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 55ms (Views: 51.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:15:52 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (13.5ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (3.4ms)
+  Rendered parkings/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 54ms (Views: 49.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:16:47 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (7.9ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.2ms)
+  Rendered parkings/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 61ms (Views: 56.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:18:32 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (9.9ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.3ms)
+  Rendered parkings/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 74ms (Views: 70.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings/2" for 127.0.0.1 at 2018-08-22 07:18:42 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (7.1ms)
+  Rendered parkings/show.js.erb (9.5ms)
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/parkings/3" for 127.0.0.1 at 2018-08-22 07:18:44 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (8.8ms)
+  Rendered parkings/show.js.erb (11.6ms)
+Completed 200 OK in 22ms (Views: 15.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings/4" for 127.0.0.1 at 2018-08-22 07:18:46 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"4"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 4 LIMIT 1[0m
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (5.5ms)
+  Rendered parkings/show.js.erb (9.5ms)
+Completed 200 OK in 26ms (Views: 13.3ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/parkings/5" for 127.0.0.1 at 2018-08-22 07:18:47 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (6.1ms)
+  Rendered parkings/show.js.erb (8.6ms)
+Completed 200 OK in 19ms (Views: 12.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parkings/1" for 127.0.0.1 at 2018-08-22 07:18:49 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (5.2ms)
+  Rendered parkings/show.js.erb (7.5ms)
+Completed 200 OK in 17ms (Views: 11.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings/14" for 127.0.0.1 at 2018-08-22 07:18:51 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"14"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 14 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 14 LIMIT 1[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (10.2ms)
+  Rendered parkings/show.js.erb (12.9ms)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/parkings/1" for 127.0.0.1 at 2018-08-22 07:18:52 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (5.8ms)
+  Rendered parkings/show.js.erb (9.1ms)
+Completed 200 OK in 20ms (Views: 14.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings/14" for 127.0.0.1 at 2018-08-22 07:18:54 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"14"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 14 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 14 LIMIT 1[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (5.1ms)
+  Rendered parkings/show.js.erb (9.2ms)
+Completed 200 OK in 17ms (Views: 13.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:26:12 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (7.7ms)
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.6ms)
+  Rendered parkings/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 72ms (Views: 67.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:28:17 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (5.6ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.2ms)
+  Rendered parkings/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 60ms (Views: 53.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings/2" for 127.0.0.1 at 2018-08-22 07:28:27 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (14.8ms)
+  Rendered parkings/show.js.erb (17.1ms)
+Completed 200 OK in 27ms (Views: 21.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings/3" for 127.0.0.1 at 2018-08-22 07:28:29 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (5.4ms)
+  Rendered parkings/show.js.erb (7.7ms)
+Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings/4" for 127.0.0.1 at 2018-08-22 07:28:31 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"4"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (6.4ms)
+  Rendered parkings/show.js.erb (8.8ms)
+Completed 200 OK in 18ms (Views: 12.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parkings/5" for 127.0.0.1 at 2018-08-22 07:28:32 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (6.8ms)
+  Rendered parkings/show.js.erb (9.9ms)
+Completed 200 OK in 21ms (Views: 14.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parkings/14" for 127.0.0.1 at 2018-08-22 07:28:33 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"14"}
+  [1m[36mParking Load (0.7ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 14 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 14 LIMIT 1[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (6.4ms)
+  Rendered parkings/show.js.erb (11.0ms)
+Completed 200 OK in 20ms (Views: 14.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/parkings/1" for 127.0.0.1 at 2018-08-22 07:28:35 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (8.3ms)
+  Rendered parkings/show.js.erb (11.1ms)
+Completed 200 OK in 20ms (Views: 14.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/parkings/new" for 127.0.0.1 at 2018-08-22 07:31:38 -0400
+Processing by ParkingsController#new as JS
+  Rendering parkings/new.js.erb
+  Rendered parkings/_form.html.erb (1.7ms)
+  Rendered parkings/new.js.erb (9.4ms)
+Completed 200 OK in 30ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parkings" for 127.0.0.1 at 2018-08-22 07:31:47 -0400
+Processing by ParkingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Roq69FFoOrDAKnPUYW0IZsDPCNPWJWqVWMo62IxVKBy35oc/uh2aAHhFeLpWm7jSgp32tHaxiyoMlaMgGfIfeA==", "parking"=>{"license"=>"TER 7895"}, "commit"=>"Create Parking"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `parkings` (`created_at`, `updated_at`, `license`) VALUES ('2018-08-22 11:31:47', '2018-08-22 11:31:47', 'TER 7895')[0m
+  [1m[35m (45.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/create.js.erb
+  Rendered parkings/_parking_ticket_info.erb (5.4ms)
+  Rendered parkings/_parking.html.erb (1.0ms)
+  Rendered parkings/create.js.erb (10.4ms)
+Completed 200 OK in 67ms (Views: 14.4ms | ActiveRecord: 46.8ms)
+
+
+Started DELETE "/parkings/22" for 127.0.0.1 at 2018-08-22 07:32:02 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"22"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 22 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[31mDELETE FROM `parkings` WHERE `parkings`.`id` = 22[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/destroy.js.erb
+  Rendered parkings/_parking_ticket_info.erb (8.1ms)
+  Rendered parkings/destroy.js.erb (10.8ms)
+Completed 200 OK in 30ms (Views: 13.9ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:39:34 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (5.4ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.3ms)
+  Rendered parkings/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 60ms (Views: 55.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:40:20 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (6.9ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.2ms)
+  Rendered parkings/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 54ms (Views: 49.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:41:59 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (11.6ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (11.1ms)
+  Rendered parkings/index.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 85ms (Views: 75.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:42:11 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (8.1ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.5ms)
+  Rendered parkings/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 64ms (Views: 58.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:43:43 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (5.4ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (6.1ms)
+  Rendered parkings/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 54ms (Views: 49.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:44:13 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (7.5ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (3.5ms)
+  Rendered parkings/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 61ms (Views: 53.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:45:44 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (5.2ms)
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (3.1ms)
+  Rendered parkings/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 44ms (Views: 40.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:47:09 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (5.6ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.3ms)
+  Rendered parkings/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 80ms (Views: 71.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/parkings/new" for 127.0.0.1 at 2018-08-22 07:47:13 -0400
+Processing by ParkingsController#new as JS
+  Rendering parkings/new.js.erb
+  Rendered parkings/_form.html.erb (1.7ms)
+  Rendered parkings/new.js.erb (10.4ms)
+Completed 200 OK in 33ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parkings" for 127.0.0.1 at 2018-08-22 07:47:39 -0400
+Processing by ParkingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f6q3/CpD2ptyM92Fn7fNFkUwVMcrj5C/qgx4jkyFoQmOxoo3wTZ6K8pc1uuoQX2iB2KqoIsbcQD+U+F22SKWbQ==", "parking"=>{"license"=>"WER 7823"}, "commit"=>"Create Parking"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `parkings` (`created_at`, `updated_at`, `license`) VALUES ('2018-08-22 11:47:39', '2018-08-22 11:47:39', 'WER 7823')[0m
+  [1m[35m (38.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/create.js.erb
+  Rendered parkings/_parking_ticket_info.erb (6.0ms)
+  Rendered parkings/_parking.html.erb (1.1ms)
+  Rendered parkings/create.js.erb (10.7ms)
+Completed 200 OK in 59ms (Views: 14.0ms | ActiveRecord: 39.8ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:48:18 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (8.4ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [7 times] (2.4ms)
+  Rendered parkings/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 54ms (Views: 47.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:51:55 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (5.2ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [7 times] (2.5ms)
+  Rendered parkings/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 52ms (Views: 47.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:53:55 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (7.1ms)
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [7 times] (3.9ms)
+  Rendered parkings/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 53ms (Views: 47.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:54:30 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (8.0ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [7 times] (2.9ms)
+  Rendered parkings/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 59ms (Views: 54.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings/1" for 127.0.0.1 at 2018-08-22 07:54:48 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (4.9ms)
+  Rendered parkings/show.js.erb (7.6ms)
+Completed 200 OK in 16ms (Views: 11.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parkings/2" for 127.0.0.1 at 2018-08-22 07:54:49 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (6.9ms)
+  Rendered parkings/show.js.erb (9.5ms)
+Completed 200 OK in 22ms (Views: 14.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/parkings/3" for 127.0.0.1 at 2018-08-22 07:54:51 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (11.6ms)
+  Rendered parkings/show.js.erb (13.9ms)
+Completed 200 OK in 25ms (Views: 17.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/parkings/4" for 127.0.0.1 at 2018-08-22 07:54:53 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"4"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (12.5ms)
+  Rendered parkings/show.js.erb (14.7ms)
+Completed 200 OK in 25ms (Views: 18.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings/23" for 127.0.0.1 at 2018-08-22 07:55:01 -0400
+Processing by ParkingsController#show as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mCACHE Parking Load (0.1ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering parkings/show.js.erb
+  Rendered parkings/_parking_ticket_info.erb (5.2ms)
+  Rendered parkings/show.js.erb (7.3ms)
+Completed 200 OK in 16ms (Views: 10.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:57:23 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (5.1ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [7 times] (5.3ms)
+  Rendered parkings/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 60ms (Views: 54.2ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:35 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM `parkings` WHERE `parkings`.`id` = 23[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/destroy.js.erb
+  Rendered parkings/_parking_ticket_info.erb (7.3ms)
+  Rendered parkings/destroy.js.erb (10.0ms)
+Completed 200 OK in 27ms (Views: 14.0ms | ActiveRecord: 6.3ms)
+
+
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:37 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:41 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:42 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:42 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:42 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:43 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:43 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:43 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:43 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 5ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:43 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:43 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:44 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (2.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 5ms (ActiveRecord: 2.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:44 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:44 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (10.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 15ms (ActiveRecord: 10.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:44 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (1.9ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 1.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:44 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:44 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:44 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:45 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:45 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started DELETE "/parkings/23" for 127.0.0.1 at 2018-08-22 07:58:45 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"23"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 23 LIMIT 1[0m
+Completed 404 Not Found in 7ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Parking with 'id'=23):
+  
+app/controllers/parkings_controller.rb:124:in `set_parking'
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 07:59:28 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (9.7ms)
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (3.1ms)
+  Rendered parkings/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 57ms (Views: 51.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parkings/new" for 127.0.0.1 at 2018-08-22 07:59:36 -0400
+Processing by ParkingsController#new as JS
+  Rendering parkings/new.js.erb
+  Rendered parkings/_form.html.erb (1.8ms)
+  Rendered parkings/new.js.erb (14.4ms)
+Completed 200 OK in 40ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parkings" for 127.0.0.1 at 2018-08-22 07:59:45 -0400
+Processing by ParkingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EnJe5zUYWtsM9aFtmfYwwO4dBidvcTJeum0szseJ223jHmMs3m36a7SaqgOuAIB0rE/4QM/l0+HuMrU2Ui7sCQ==", "parking"=>{"license"=>"JER 43543"}, "commit"=>"Create Parking"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `parkings` (`created_at`, `updated_at`, `license`) VALUES ('2018-08-22 11:59:45', '2018-08-22 11:59:45', 'JER 43543')[0m
+  [1m[35m (21.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/create.js.erb
+  Rendered parkings/_parking_ticket_info.erb (5.0ms)
+  Rendered parkings/_parking.html.erb (1.0ms)
+  Rendered parkings/create.js.erb (10.7ms)
+Completed 200 OK in 42ms (Views: 14.0ms | ActiveRecord: 22.7ms)
+
+
+Started DELETE "/parkings/24" for 127.0.0.1 at 2018-08-22 07:59:51 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"24"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 24 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM `parkings` WHERE `parkings`.`id` = 24[0m
+  [1m[35m (22.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/destroy.js.erb
+  Rendered parkings/_parking_ticket_info.erb (5.7ms)
+  Rendered parkings/destroy.js.erb (8.3ms)
+Completed 200 OK in 39ms (Views: 11.1ms | ActiveRecord: 23.2ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 08:00:34 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (7.5ms)
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [6 times] (2.4ms)
+  Rendered parkings/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 53ms (Views: 49.3ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/parkings/14" for 127.0.0.1 at 2018-08-22 08:00:38 -0400
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"14"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 14 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM `parkings` WHERE `parkings`.`id` = 14[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/destroy.js.erb
+  Rendered parkings/_parking_ticket_info.erb (5.3ms)
+  Rendered parkings/destroy.js.erb (7.8ms)
+Completed 200 OK in 22ms (Views: 10.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-08-22 08:00:58 -0400
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (5.6ms)
+  [1m[36mParking Load (1.9ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [5 times] (2.2ms)
+  Rendered parkings/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 48ms (Views: 43.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/parkings/new" for 127.0.0.1 at 2018-08-22 08:01:00 -0400
+Processing by ParkingsController#new as JS
+  Rendering parkings/new.js.erb
+  Rendered parkings/_form.html.erb (1.7ms)
+  Rendered parkings/new.js.erb (11.8ms)
+Completed 200 OK in 35ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parkings" for 127.0.0.1 at 2018-08-22 08:01:11 -0400
+Processing by ParkingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tHOH5mVZ43PqOmzpPg3I3L3nw0DfMCnWNheIRGze20lFH7otjixDw1JVZ4cJ+3ho/7U9J3+kyGliSBG8+XnsLQ==", "parking"=>{"license"=>"TRE 7892"}, "commit"=>"Create Parking"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `parkings` (`created_at`, `updated_at`, `license`) VALUES ('2018-08-22 12:01:11', '2018-08-22 12:01:11', 'TRE 7892')[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/create.js.erb
+  Rendered parkings/_parking_ticket_info.erb (6.8ms)
+  Rendered parkings/_parking.html.erb (0.9ms)
+  Rendered parkings/create.js.erb (11.4ms)
+Completed 200 OK in 27ms (Views: 14.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/parkings/new" for 127.0.0.1 at 2018-08-22 08:01:16 -0400
+Processing by ParkingsController#new as JS
+  Rendering parkings/new.js.erb
+  Rendered parkings/_form.html.erb (3.6ms)
+  Rendered parkings/new.js.erb (12.8ms)
+Completed 200 OK in 37ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parkings" for 127.0.0.1 at 2018-08-22 08:01:32 -0400
+Processing by ParkingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DQ8I3ONoZtpYR689ERWgA1bHefcHrOGX4DpiiCiwoor8YzUXCB3GauAopFMm4xC3FJWHkKc4ACi0ZftwvReV7g==", "parking"=>{"license"=>"YEW 5673"}, "commit"=>"Create Parking"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `parkings` (`created_at`, `updated_at`, `license`) VALUES ('2018-08-22 12:01:32', '2018-08-22 12:01:32', 'YEW 5673')[0m
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/create.js.erb
+  Rendered parkings/_parking_ticket_info.erb (8.0ms)
+  Rendered parkings/_parking.html.erb (0.9ms)
+  Rendered parkings/create.js.erb (14.5ms)
+Completed 200 OK in 66ms (Views: 17.9ms | ActiveRecord: 41.0ms)
+
+

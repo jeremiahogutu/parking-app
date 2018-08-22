@@ -5,32 +5,35 @@
 <div id="parking-ticket-info">
   <%= render 'parking_ticket_info' %>
 </div>
-
-<table id="parkings">
-  <thead>
-  <tr>
-    <th>Parking ID</th>
-    <th>License Plate</th>
-    <th colspan="3"></th>
-  </tr>
-  </thead>
-
-  <tbody>
-  <%= render @parkings %>
-  </tbody>
-</table>
-
-<br>
-
-<p id="test" style="display: none">no spots available</p>
-
+<div class="no-spot-container w-100 flex-center">
+  <p id="no-spots" style="display: none" class="red_button">no spots available</p>
+</div>
 <% if @spots_available > 0 %>
   <div id="new-parking" class="flex-center">
     <%= link_to 'New Parking', new_parking_path, remote: true, class: 'button' %>
   </div>
 <% else %>
-  <p id="test" class="red_button">no spots available</p>
+  <div class="no-spots-container w-100 flex-center">
+    <p id="no-spots" class="red_button">no spots available</p>
+  </div>
 <% end %>
+<div class="parking-history-container flex-center w-100">
+  <table id="parkings">
+    <thead>
+    <tr>
+      <th>Parking ID</th>
+      <th>License Plate</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <%= render @parkings %>
+    </tbody>
+  </table>
+</div>
+<br>
+
 
 
 

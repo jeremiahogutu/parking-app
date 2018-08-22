@@ -1,11 +1,8 @@
-$('.delete').bind('ajax:success', function () {
+$('.delete').bind('ajax:success', function() {
     $(this).closest('tr').fadeOut();
     $('#parking-ticket-info').html("<%= j render 'parking_ticket_info' %>")
-    <% if @spots_available > 0  %>
+    <% if @spots_available >= 0  %>
     $('#new-parking a').show();
-    $('#test').hide();
-    <% else %>
-    $('#new-parking a').show();
+    $('#no-spots').hide();
     <% end %>
-
 })
