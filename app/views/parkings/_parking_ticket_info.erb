@@ -1,13 +1,60 @@
-<h2>Current time <span id="time" class="data-fix"></span></h2>
-<h2>Ticket purchased at: <span class="data-fix"><%= (@current_parking_info.created_at - 4.hours).strftime('%b %d, %Y %I:%M:%S %p') %></span></h2>
-<h2>Duration Of Parking: <span id="demo" class="data-fix"></span></h2>
-<h2>Parking spots available: <span class="data-fix"><%= @spots_available %></span></h2>
-<h2>Time Difference: <span class="data-fix"><%= @time_difference %>hrs</span></h2>
-<h2>Amount Due: <span class="data-fix"><%= @amount_due %>$</span></h2>
+<div class="wrapper">
+  <div class="current-time-container ">
+    <div class="current-time flex-align-center w-100 ">
+      <div class="img-container"><%= image_tag("clock.svg") %></div>
+      <h2 class="secondary-text font-15 flex-column current-time-text">Current time
+        <span id="time" class="data-fix font-15"></span></h2>
+    </div>
+    <div class="purchase-time flex-align-center w-100 ">
+      <div class="img-container"><%= image_tag("ticket.svg") %></div>
+      <h2 class="secondary-text font-15 flex-column">Ticket purchased:
+        <span class="data-fix font-15"><%= (@current_parking_info.created_at - 4.hours).strftime('%b %d, %Y %I:%M %p') %></span>
+      </h2>
+    </div>
+  </div>
+
+  <div class="desktop-container">
+    <div class="duration-container flex-align-center w-100">
+      <div class="img-container"><%= image_tag("clock.svg") %></div>
+      <div class="duration-data">
+        <h2 class="secondary-text font-15 flex-column">Duration Of Parking:
+          <% if @current_parking_info.is_void %>
+            <span class="data-fix font-15">Proceed to exit</span>
+          <% else %>
+            <span id="demo" class="data-fix font-15"></span>
+          <% end %>
+        </h2>
+      </div>
+    </div>
+    <div class="parking-spots-container flex-align-center w-100">
+      <div class="img-container"><%= image_tag("parking.svg") %></div>
+      <h2 class="secondary-text font-15 flex-column">Parking spots available:
+        <span class="data-fix font-15"><%= @spots_available %></span></h2>
+    </div>
+  </div>
+  <div class="desktop-container" id="final-container">
+    <div class="license-plate-container flex-align-center w-100">
+      <div class="img-container"><%= image_tag("license-plate.svg") %></div>
+      <h2 class="secondary-text font-15 flex-column license-plate-text">License Plate No:
+        <span class="data-fix font-15"><%= @current_parking_info.license %></span></h2>
+    </div>
+    <div class="amount-due-container flex-align-center w-100">
+      <div class="img-container"><%= image_tag("banknote.svg") %></div>
+      <h2 class="secondary-text font-15 flex-column amount-due-text">Amount Due:
+        <% if @amount_due == 'Paid' %>
+          <span class="data-fix font-15"><%= @amount_due %></span>
+        <% else %>
+          <span class="data-fix font-15">$<%= @amount_due %></span>
+        <% end %>
+
+      </h2>
+    </div>
+  </div>
+</div>
 
 <script>
-    // Set the date we're counting down to
-    var countDownDate = new Date("<%= ((@current_parking_info.created_at - 4.hours) ).strftime("%b %d, %Y %H:%M:%S") %>").getTime();
+    // Get the time parking ticket was created
+    var parking_time = new Date("<%= ((@current_parking_info.created_at - 4.hours) ).strftime("%b %d, %Y %H:%M:%S") %>").getTime();
 
     function checkTime(i) {
         if (i < 10) {
@@ -16,20 +63,18 @@
         return i;
     }
 
-    var x = setInterval(function() {
+    var x = setInterval(function () {
 
-        // Get todays date and time
         var now = new Date().getTime();
-        console.log(now)
 
-        // Find the distance between now and the count down date
-        var distance = now - countDownDate;
+        // Find the duration between now and the time the parking ticket was created
+        var duration = now - parking_time;
 
         // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance/(60*60*1000*24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = checkTime(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
-        var seconds = checkTime(Math.floor((distance % (1000 * 60)) / 1000));
+        var days = Math.floor(duration / (60 * 60 * 1000 * 24));
+        var hours = Math.floor((duration % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = checkTime(Math.floor((duration % (1000 * 60 * 60)) / (1000 * 60)));
+        var seconds = checkTime(Math.floor((duration % (1000 * 60)) / 1000));
 
         // Display the result in the element with id="demo"
         if (days > 0) {
@@ -40,7 +85,6 @@
                 + minutes + "m " + seconds + "s ";
         }
     }, 1000);
-
 
 
     function startTime() {
@@ -57,10 +101,11 @@
         // add a zero in front of numbers<10
         m = checkTime(m);
         s = checkTime(s);
-        document.getElementById('time').innerHTML = h + ":" + m + ":" + s + ' '+am_pm;
-        t = setTimeout(function() {
+        document.getElementById('time').innerHTML = h + ":" + m + ":" + s + ' ' + am_pm;
+        t = setTimeout(function () {
             startTime()
         }, 500);
     }
+
     startTime();
 </script>

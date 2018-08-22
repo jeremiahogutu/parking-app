@@ -2,7 +2,7 @@ $('#new-parking form').remove();
 <% if @spots_available > 0  %>
 $('#new-parking a').show();
 <% else %>
-$('#test').show();
+$('#no-spots').show();
 <% end %>
 $('#parking-ticket-info').html("<%= j render 'parking_ticket_info' %>")
 $('table#parkings tbody').append("<%= j render @parking %>")
