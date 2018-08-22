@@ -19,8 +19,6 @@
   <tr>
     <th>Parking ID</th>
     <th>License Plate</th>
-    <th>Price($)</th>
-    <th>Ticket Validity</th>
     <th colspan="3"></th>
   </tr>
   </thead>
@@ -32,9 +30,15 @@
 
 <br>
 
-<div id="new-parking">
-  <%= link_to 'New Parking', new_parking_path, remote: true %>
-</div>
+<p id="test" style="display: none">no spots available</p>
+
+<% if @spots_available > 0 %>
+  <div id="new-parking">
+    <%= link_to 'New Parking', new_parking_path, remote: true %>
+  </div>
+<% else %>
+  <p id="test">no spots available</p>
+<% end %>
 
 
 
