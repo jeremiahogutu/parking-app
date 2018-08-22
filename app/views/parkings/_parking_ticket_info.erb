@@ -1,9 +1,29 @@
-<h2>Current time <span id="time" class="data-fix"></span></h2>
-<h2>Ticket purchased at: <span class="data-fix"><%= (@current_parking_info.created_at - 4.hours).strftime('%b %d, %Y %I:%M:%S %p') %></span></h2>
-<h2>Duration Of Parking: <span id="demo" class="data-fix"></span></h2>
-<h2>Parking spots available: <span class="data-fix"><%= @spots_available %></span></h2>
-<h2>Time Difference: <span class="data-fix"><%= @time_difference %>hrs</span></h2>
-<h2>Amount Due: <span class="data-fix"><%= @amount_due %>$</span></h2>
+<div class="current-time-container flex-around">
+  <div class="current-time flex-center w-100">
+    <h2 class="secondary-text font-15 flex-column">Current time <span id="time" class="data-fix font-15"></span></h2>
+  </div>
+  <div class="purchase-time flex-center w-100">
+    <h2 class="secondary-text font-15 flex-column">Ticket purchased: <span class="data-fix font-15"><%= (@current_parking_info.created_at - 4.hours).strftime('%b %d, %Y %I:%M %p') %></span></h2>
+  </div>
+</div>
+<div class="duration-container flex-align-center">
+  <div class="img-container"><%=image_tag("clock.svg")%></div>
+  <div class="duration-data"><h2 class="secondary-text font-15 flex-column">Duration Of Parking: <span id="demo" class="data-fix font-15"></span></h2></div>
+</div>
+<div class="parking-spots-container flex-align-center">
+  <div class="img-container"><%= image_tag("parking.svg") %></div>
+  <h2 class="secondary-text font-15 flex-column">Parking spots available: <span class="data-fix font-15"><%= @spots_available %></span></h2>
+</div>
+<div class="license-plate-container flex-align-center">
+  <div class="img-container"><%= image_tag("license-plate.svg") %></div>
+  <h2 class="secondary-text font-15 flex-column">License Plate No: <span class="data-fix font-15"><%= @current_parking_info.license %></span></h2>
+</div>
+
+<div class="amount-due-container flex-align-center">
+  <div class="img-container"><%= image_tag("banknote.svg") %></div>
+  <h2 class="secondary-text font-15 flex-column">Amount Due: <span class="data-fix font-15"><%= @amount_due %>$</span></h2>
+</div>
+
 
 <script>
     // Set the date we're counting down to
@@ -20,7 +40,6 @@
 
         // Get todays date and time
         var now = new Date().getTime();
-        console.log(now)
 
         // Find the distance between now and the count down date
         var distance = now - countDownDate;

@@ -10,6 +10,149 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require normalize-rails
  *= require_tree .
  *= require_self
  */
+
+body {
+    margin: 0 auto !important;
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+
+h2 {
+    color: #cbcbcb;
+    line-height: 16px;
+    margin: 0;
+}
+
+span {
+    color: #686868;
+    padding-top: 5px;
+}
+
+img {
+    width: 30px;
+}
+
+.app-container {
+    width: 100%;
+    display: flex;
+    background: #344978;
+    justify-content: center;
+}
+
+.app-title {
+    margin: 0;
+    padding: 20px;
+    color: #fff;
+    font-size: 40px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.font-15 {
+    font-size: 15px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+.current-time-container {
+    border-bottom: dashed 1px #cbcbcb;
+}
+
+.current-time {
+    border-right: dashed 1px #cbcbcb;
+    padding-right: 10px;
+}
+
+.current-time span {
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+.purchase-time span {
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+.img-container {
+    padding: 0 25px;
+}
+
+.parking-spots-container {
+    display: flex;
+}
+
+.secondary-text {
+    margin: 0;
+    line-height: 20px;
+    padding: 10px;
+}
+
+.amount-due-container {
+    border-bottom: dashed 1px #cbcbcb;
+}
+
+.button {
+    background-color: #42cd98;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color:  #42cd98;
+    color: white;
+}
+
+.red_button {
+    background-color: #db6e6b;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.red_button:hover {
+    background-color:  #db6e6b;
+    color: white;
+}

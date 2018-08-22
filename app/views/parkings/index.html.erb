@@ -1,14 +1,6 @@
-<style>
-  .data-fix {
-    font-weight: normal;
-    font-size: 15px;
-  }
-</style>
-
-<p id="notice"><%= notice %></p>
-
-
-<h1>Parkings</h1>
+<div class="app-container">
+  <h1 class="app-title">Parking Lot</h1>
+</div>
 
 <div id="parking-ticket-info">
   <%= render 'parking_ticket_info' %>
@@ -33,11 +25,11 @@
 <p id="test" style="display: none">no spots available</p>
 
 <% if @spots_available > 0 %>
-  <div id="new-parking">
-    <%= link_to 'New Parking', new_parking_path, remote: true %>
+  <div id="new-parking" class="flex-center">
+    <%= link_to 'New Parking', new_parking_path, remote: true, class: 'button' %>
   </div>
 <% else %>
-  <p id="test">no spots available</p>
+  <p id="test" class="red_button">no spots available</p>
 <% end %>
 
 
