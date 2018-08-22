@@ -3,8 +3,8 @@
   <td><%= parking.license %></td>
   <td><%= link_to 'Ticket Info', parking, data: {remote: true}, class: ' table-button show-button' %></td>
   <% if parking.is_void %>
-    <td><%= link_to 'Exit Parking Lot', parking, method: :delete, data: {remote: true}, class: 'table-button delete-button delete' %></td>
+    <td><%= link_to 'Exit Parking Lot', parking, method: :delete, data: { remote: true}, class: 'table-button delete-button delete' %></td>
   <% else %>
-    <td><%= link_to 'Pay Ticket', pay_ticket_path(parking), data: {:confirm => '', remote: true}, class: 'table-button pay-button' %></td>
+    <td><%= link_to 'Pay Ticket', pay_ticket_path(parking), data: { confirm: 'Amount due is $' + Parking.get_amount(parking.id).to_s + ' proceed with payment?', remote: true}, class: 'table-button pay-button', id: 'modal-test' %></td>
   <% end %>
 </tr>

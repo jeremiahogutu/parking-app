@@ -232,7 +232,8 @@ img {
 }
 
 #parkings th {
-    background: #ddd;
+    background: #344978;
+    color: #fff;
 }
 
 #parkings tr.header, #parkings tr:hover {

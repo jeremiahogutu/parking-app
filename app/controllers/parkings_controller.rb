@@ -106,12 +106,14 @@ class ParkingsController < ApplicationController
 
   def pay_ticket
     # binding.pry
+    @parkings = Parking.all
     @occupied_spots = Parking.all.count
     number_of_spots = 7
     @spots_available = number_of_spots - @occupied_spots
     @current_parking_info = Parking.find(params[:id])
     @current_parking_info.is_void = true
     @current_parking_info.save
+    @amount_due = 'Paid'
     respond_to do |format|
       format.js
       format.html { redirect_to @parking, notice: 'Parking was successfully created.' }
@@ -128,7 +130,12 @@ class ParkingsController < ApplicationController
     @spots_available = number_of_spots - @total_cars
     @current_parking_info = Parking.last
     @time_difference = TimeDifference.between(Time.now, @current_parking_info.created_at).in_hours.floor
-    @amount_due = final_payment(@time_difference)
+    @amount_due = if @current_parking_info.is_void
+                    'Paid'
+                  else
+                    final_payment(@time_difference)
+                  end
+
     respond_to do |format|
       format.js
       format.html { redirect_to parkings_url, notice: 'Parking was successfully destroyed.' }
