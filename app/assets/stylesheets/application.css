@@ -10,6 +10,288 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require normalize-rails
  *= require_tree .
  *= require_self
  */
+
+body {
+    margin: 0 auto !important;
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+
+h2 {
+    color: #cbcbcb;
+    line-height: 16px;
+    margin: 0;
+}
+
+span {
+    color: #686868;
+    padding-top: 5px;
+}
+
+img {
+    width: 30px;
+}
+
+.app-container {
+    width: 100%;
+    display: flex;
+    background: #344978;
+    justify-content: center;
+}
+
+.app-title {
+    margin: 0;
+    padding: 20px;
+    color: #fff;
+    font-size: 40px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.p-25-top-bottom {
+    padding: 25px 0;
+}
+.font-15 {
+    font-size: 15px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.current-time-container {
+    display: flex;
+    border-bottom: dashed 1px #cbcbcb;
+}
+
+.current-time {
+    border-right: dashed 1px #cbcbcb;
+    padding-right: 10px;
+}
+
+.current-time span {
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+.purchase-time span {
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+.img-container {
+    padding: 0 25px;
+}
+
+.parking-spots-container {
+    display: flex;
+}
+
+.secondary-text {
+    margin: 0;
+    line-height: 20px;
+    padding: 10px;
+}
+
+.amount-due-container {
+    border-bottom: dashed 1px #cbcbcb;
+}
+
+.button {
+    background-color: #42cd98;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color:  #42cd98;
+    color: white;
+}
+
+.red_button {
+    background-color: #db6e6b;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.red_button:hover {
+    background-color:  #db6e6b;
+    color: white;
+}
+
+.table-button {
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.show-button {
+    background-color: #fff;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+.show-button:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.pay-button {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50
+}
+
+.pay-button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-button {
+    background-color: white;
+    color: black;
+    border: 2px solid #f44336;
+}
+
+.delete-button:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+#final-container {
+    border-bottom: none;
+}
+
+#parkings {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+}
+
+#parkings th, #parkings td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+}
+
+#parkings tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd;
+}
+
+#parkings th {
+    background: #344978;
+    color: #fff;
+}
+
+#parkings tr.header, #parkings tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+}
+
+#new-parking {
+    padding-top: 10px;
+}
+
+.no-spot-container {
+    padding-top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .wrapper {
+        border: solid 1px #cbcbcb;
+    }
+    .desktop-container {
+        display: flex;
+        border-bottom: dashed 1px #cbcbcb;
+    }
+
+    .amount-due-container {
+        border-bottom: none;
+    }
+
+    .amount-due-container, .license-plate-container, .duration-container, .parking-spots-container, .current-time, .purchase-time {
+        justify-content: center;
+        padding: 25px 0;
+    }
+
+    .parking-history-container {
+        padding: 25px 0;
+    }
+
+    .license-plate-text {
+        padding-right: 25px;
+    }
+
+    .amount-due-text {
+        padding-right: 65px;
+    }
+
+    .current-time {
+        padding-right: 0;
+    }
+
+    .current-time-text {
+        padding-right: 63px;
+    }
+
+    .duration-container {
+        border-right: dashed 1px #cbcbcb;
+    }
+
+    .license-plate-container {
+        border-right: dashed 1px #cbcbcb;
+    }
+}
