@@ -16,13 +16,12 @@ class ParkingsController < ApplicationController
     min_payment = 3
     if time_difference == 24
       hours = 1
-      days =  (time_difference + hours) - time_difference
+      days =  1
       amount_due = calculate_payment(min_payment, hours) + (days * 10.25)
     elsif time_difference > 24
       hours = time_difference % 24
-      days = time_difference - (time_difference + hours)
+      days = time_difference / 24
       amount_due = calculate_payment(min_payment, hours) + (days * 10.25)
-      # binding.pry
     else
       amount_due = calculate_payment(min_payment, time_difference)
     end
