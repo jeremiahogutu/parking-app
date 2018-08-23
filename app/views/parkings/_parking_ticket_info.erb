@@ -8,7 +8,11 @@
     <div class="purchase-time flex-align-center w-100 ">
       <div class="img-container"><%= image_tag("ticket.svg") %></div>
       <h2 class="secondary-text font-15 flex-column">Ticket purchased:
-        <span class="data-fix font-15"><%= (@current_parking_info.created_at - 4.hours).strftime('%b %d, %Y %I:%M %p') %></span>
+        <% if @current_parking_info %>
+          <span class="data-fix font-15"><%= (@current_parking_info.created_at - 4.hours).strftime('%b %d, %Y %I:%M %p') %></span>
+        <% else %>
+          <span class="data-fix font-15"></span>
+        <% end %>
       </h2>
     </div>
   </div>
@@ -18,10 +22,14 @@
       <div class="img-container"><%= image_tag("clock.svg") %></div>
       <div class="duration-data">
         <h2 class="secondary-text font-15 flex-column">Duration Of Parking:
-          <% if @current_parking_info.is_void %>
-            <span class="data-fix font-15">Proceed to exit</span>
+          <% if @current_parking_info %>
+            <% if @current_parking_info.is_void %>
+              <span class="data-fix font-15">Proceed to exit</span>
+            <% else %>
+              <span id="demo" class="data-fix font-15"></span>
+            <% end %>
           <% else %>
-            <span id="demo" class="data-fix font-15"></span>
+            <span class="data-fix font-15"></span>
           <% end %>
         </h2>
       </div>
@@ -29,15 +37,23 @@
     <div class="parking-spots-container flex-align-center w-100">
       <div class="img-container"><%= image_tag("parking.svg") %></div>
       <h2 class="secondary-text font-15 flex-column">Parking spots available:
-        <span class="data-fix font-15"><%= @spots_available %></span></h2>
-    </div>
+        <% if @spots_available %>
+          <span class="data-fix font-15"><%= @spots_available %></span></h2>
+        <% else %>
+          <span class="data-fix font-15"></span></h2>
+        <% end %>
+        </div>
   </div>
   <div class="desktop-container" id="final-container">
     <div class="license-plate-container flex-align-center w-100">
       <div class="img-container"><%= image_tag("license-plate.svg") %></div>
       <h2 class="secondary-text font-15 flex-column license-plate-text">License Plate No:
-        <span class="data-fix font-15"><%= @current_parking_info.license %></span></h2>
-    </div>
+        <% if @current_parking_info %>
+          <span class="data-fix font-15"><%= @current_parking_info.license %></span></h2>
+        <% else %>
+          <span class="data-fix font-15"></span></h2>
+        <% end %>
+        </div>
     <div class="amount-due-container flex-align-center w-100">
       <div class="img-container"><%= image_tag("banknote.svg") %></div>
       <h2 class="secondary-text font-15 flex-column amount-due-text">Amount Due:
@@ -54,7 +70,9 @@
 
 <script>
     // Get the time parking ticket was created
+    <% unless @current_parking_info.nil? %>
     var parking_time = new Date("<%= ((@current_parking_info.created_at - 4.hours) ).strftime("%b %d, %Y %H:%M:%S") %>").getTime();
+    <% end %>
 
     function checkTime(i) {
         if (i < 10) {

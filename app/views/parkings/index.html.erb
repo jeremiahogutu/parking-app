@@ -8,13 +8,19 @@
 <div class="no-spot-container w-100 flex-center">
   <p id="no-spots" style="display: none" class="red_button">no spots available</p>
 </div>
-<% if @spots_available > 0 %>
+<% if @spots_available %>
+  <% if @spots_available > 0 %>
+    <div id="new-parking" class="flex-center">
+      <%= link_to 'New Parking', new_parking_path, remote: true, class: 'button' %>
+    </div>
+  <% else %>
+    <div class="no-spots-container w-100 flex-center">
+      <p id="no-spots" class="red_button">no spots available</p>
+    </div>
+  <% end %>
+<% else %>
   <div id="new-parking" class="flex-center">
     <%= link_to 'New Parking', new_parking_path, remote: true, class: 'button' %>
-  </div>
-<% else %>
-  <div class="no-spots-container w-100 flex-center">
-    <p id="no-spots" class="red_button">no spots available</p>
   </div>
 <% end %>
 <div class="parking-history-container flex-center w-100">
