@@ -6,22 +6,24 @@ class ParkingsController < ApplicationController
   def index
     @parkings = Parking.all
     number_of_spots = 7
-    @current_parking_info = Parking.last
-    @spots_available = number_of_spots - @parkings.count
-    @time_difference = TimeDifference.between(Time.now, @current_parking_info.created_at).in_hours.floor
-    @amount_due = final_payment(@time_difference)
+    unless Parking.last.nil?
+      @current_parking_info = Parking.last
+      @spots_available = number_of_spots - @parkings.count
+      @time_difference = TimeDifference.between(Time.now, @current_parking_info.created_at).in_hours.floor
+      @amount_due = final_payment(@time_difference)
+    end
   end
 
   def final_payment(time_difference)
     min_payment = 3
     if time_difference == 24
       hours = 1
-      days =  1
-      amount_due = calculate_payment(min_payment, hours) + (days * 10.25)
+      days = 1
+      amount_due = calculate_payment(min_payment, hours) + (days * 10.125)
     elsif time_difference > 24
       hours = time_difference % 24
       days = time_difference / 24
-      amount_due = calculate_payment(min_payment, hours) + (days * 10.25)
+      amount_due = calculate_payment(min_payment, hours) + (days * 10.125)
     else
       amount_due = calculate_payment(min_payment, time_difference)
     end
@@ -76,9 +78,11 @@ class ParkingsController < ApplicationController
         @total_spots = Parking.all.count
         number_of_spots = 7
         @spots_available = number_of_spots - @total_spots
-        @current_parking_info = Parking.last
-        @time_difference = TimeDifference.between(Time.now, @current_parking_info.created_at).in_hours.floor
-        @amount_due = final_payment(@time_difference)
+        unless Parking.last.nil?
+          @current_parking_info = Parking.last
+          @time_difference = TimeDifference.between(Time.now, @current_parking_info.created_at).in_hours.floor
+          @amount_due = final_payment(@time_difference)
+        end
         format.js
         format.html { redirect_to @parking, notice: 'Parking was successfully created.' }
         format.json { render :show, status: :created, location: @parking }
@@ -126,15 +130,16 @@ class ParkingsController < ApplicationController
     @parking.destroy
     @total_cars = Parking.all.count
     number_of_spots = 7
-    @spots_available = number_of_spots - @total_cars
-    @current_parking_info = Parking.last
-    @time_difference = TimeDifference.between(Time.now, @current_parking_info.created_at).in_hours.floor
-    @amount_due = if @current_parking_info.is_void
-                    'Paid'
-                  else
-                    final_payment(@time_difference)
-                  end
-
+    unless @total_cars.zero?
+      @spots_available = number_of_spots - @total_cars
+      @current_parking_info = Parking.last
+      @time_difference = TimeDifference.between(Time.now, @current_parking_info.created_at).in_hours.floor
+      @amount_due = if @current_parking_info.is_void
+                      'Paid'
+                    else
+                      final_payment(@time_difference)
+                    end
+    end
     respond_to do |format|
       format.js
       format.html { redirect_to parkings_url, notice: 'Parking was successfully destroyed.' }
