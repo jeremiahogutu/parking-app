@@ -1,3 +1,7 @@
 
 \.idea/
 /config/secrets.yml
+
+log/
+
+*.cache

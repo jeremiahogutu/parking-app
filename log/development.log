@@ -11212,3 +11212,168 @@ Processing by ParkingsController#show as JS
 Completed 200 OK in 62ms (Views: 46.0ms | ActiveRecord: 2.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-12-10 10:48:57 -0500
+  
+ActiveRecord::NoDatabaseError (Unknown database 'parking-app_development'):
+  
+activerecord (5.1.6.1) lib/active_record/connection_adapters/mysql2_adapter.rb:25:in `rescue in mysql2_connection'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/mysql2_adapter.rb:11:in `mysql2_connection'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.6.1) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.6.1) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.6.1) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.6.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (26.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (23.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (15.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5390826618284636550', 0)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateParkings (20180820120126)
+  [1m[35m (13.8ms)[0m  [1m[35mCREATE TABLE `parkings` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (7.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180820120126')[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddColumnsToParking (20180820121144)
+  [1m[35m (40.9ms)[0m  [1m[35mALTER TABLE `parkings` ADD `license` varchar(255)[0m
+  [1m[35m (19.5ms)[0m  [1m[35mALTER TABLE `parkings` ADD `price` decimal[0m
+  [1m[35m (21.1ms)[0m  [1m[35mALTER TABLE `parkings` ADD `validity` int[0m
+  [1m[35m (67.8ms)[0m  [1m[35mALTER TABLE `parkings` ADD `is_void` tinyint(1) DEFAULT 0[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180820121144')[0m
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-12-10 15:50:48', '2018-12-10 15:50:48')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5390826618284636550')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-12-10 10:50:59 -0500
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/_parking_ticket_info.erb (760.1ms)
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered parkings/index.html.erb within layouts/application (763.6ms)
+Completed 200 OK in 887ms (Views: 873.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/parkings/new" for 127.0.0.1 at 2018-12-10 10:51:13 -0500
+Processing by ParkingsController#new as JS
+  Rendering parkings/new.js.erb
+  Rendered parkings/_form.html.erb (17.9ms)
+  Rendered parkings/new.js.erb (26.5ms)
+Completed 200 OK in 56ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parkings" for 127.0.0.1 at 2018-12-10 10:51:15 -0500
+Processing by ParkingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GU0CYpun1kkOPJY+sxrGk9mMA7adTZEN0HT3qsBwKRFDzBeeNRTAFdkZv6ZBKjq+3I3jdCOccZayGJPWVrI22Q==", "parking"=>{"license"=>"asdasd"}, "commit"=>"Create Parking"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `parkings` (`created_at`, `updated_at`, `license`) VALUES ('2018-12-10 15:51:15', '2018-12-10 15:51:15', 'asdasd')[0m
+  [1m[35m (31.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m  [["LIMIT", 1]]
+  Rendering parkings/create.js.erb
+  Rendered parkings/_parking_ticket_info.erb (8.2ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  Rendered parkings/_parking.html.erb (4.7ms)
+  Rendered parkings/create.js.erb (16.9ms)
+Completed 200 OK in 62ms (Views: 19.5ms | ActiveRecord: 33.2ms)
+
+
+Started GET "/parkings/pay-ticket/1" for 127.0.0.1 at 2018-12-10 10:51:24 -0500
+Processing by ParkingsController#pay_ticket as JS
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE `parkings` SET `is_void` = 1, `updated_at` = '2018-12-10 15:51:24' WHERE `parkings`.`id` = 1[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering parkings/pay_ticket.js.erb
+  Rendered parkings/_parking_ticket_info.erb (7.1ms)
+  [1m[36mParking Load (3.5ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered collection of parkings/_parking.html.erb [1 times] (1.4ms)
+  Rendered parkings/pay_ticket.js.erb (17.4ms)
+Completed 200 OK in 34ms (Views: 19.8ms | ActiveRecord: 8.6ms)
+
+
+Started DELETE "/parkings/1" for 127.0.0.1 at 2018-12-10 10:51:26 -0500
+Processing by ParkingsController#destroy as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM `parkings` WHERE `parkings`.`id` = 1[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  Rendering parkings/destroy.js.erb
+  Rendered parkings/_parking_ticket_info.erb (6.0ms)
+  Rendered parkings/destroy.js.erb (8.7ms)
+Completed 200 OK in 21ms (Views: 11.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/parkings/new" for 127.0.0.1 at 2018-12-10 10:51:32 -0500
+Processing by ParkingsController#new as JS
+  Rendering parkings/new.js.erb
+  Rendered parkings/_form.html.erb (1.9ms)
+  Rendered parkings/new.js.erb (12.0ms)
+Completed 200 OK in 33ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parkings" for 127.0.0.1 at 2018-12-10 10:51:35 -0500
+Processing by ParkingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tknf5+lbSbPcQSCz1jhFbs0I4/29wHlM6gcORr9n0R3syMobR+hf7wtkCSskCLlDyAkDPwMRmdeIa2o6KaXO1Q==", "parking"=>{"license"=>"123123123"}, "commit"=>"Create Parking"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `parkings` (`created_at`, `updated_at`, `license`) VALUES ('2018-12-10 15:51:35', '2018-12-10 15:51:35', '123123123')[0m
+  [1m[35m (55.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `parkings`[0m
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m
+  [1m[36mCACHE Parking Load (0.0ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` ORDER BY `parkings`.`id` DESC LIMIT 1[0m  [["LIMIT", 1]]
+  Rendering parkings/create.js.erb
+  Rendered parkings/_parking_ticket_info.erb (6.6ms)
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m
+  Rendered parkings/_parking.html.erb (2.1ms)
+  Rendered parkings/create.js.erb (12.7ms)
+Completed 200 OK in 79ms (Views: 15.4ms | ActiveRecord: 57.2ms)
+
+
